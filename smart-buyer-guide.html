@@ -464,6 +464,34 @@
             color: var(--charcoal);
         }
 
+        .accordion-icon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gray-soft);
+            border-radius: 50%;
+            transition: var(--transition-smooth);
+        }
+
+        .accordion-icon-arrow svg {
+            width: 16px;
+            height: 16px;
+            color: var(--charcoal);
+            transition: transform 0.3s;
+        }
+
+        .accordion-item.active .accordion-icon-arrow {
+            background: var(--green-deep);
+        }
+
+        .accordion-item.active .accordion-icon-arrow svg {
+            color: var(--white);
+            transform: rotate(180deg);
+        }
+
         .accordion-title-wrapper {
             flex: 1;
         }
@@ -815,6 +843,11 @@
                 font-size: 0.95rem;
             }
 
+            .accordion-icon {
+                width: 20px;
+                height: 20px;
+            }
+
             .accordion-title {
                 font-size: 1rem;
             }
@@ -890,10 +923,10 @@
                 Yelahanka, North Bangalore
             </div>
             <h1 class="hero-title">
-                Every Smart Buyer Takes These Steps Before Choosing a Home in <span class="highlight">Yelahanka</span>
+                Steps Every Smart Buyer Takes Before Choosing a Home in <span class="highlight">Yelahanka</span>
             </h1>
             <p class="hero-subtitle">
-                Buying a home is one of life's biggest milestones. Smart buyers go beyond brochures — they evaluate data, location, and long-term value.
+                Buying a home is one of life's biggest milestones. But with excitement comes responsibility. Smart buyers don't just look at glossy brochures; they dig deeper into the data, the location, and the future potential.
             </p>
             <a href="#smart-buyer-steps" class="hero-cta">
                 Begin Your Journey
@@ -901,12 +934,6 @@
                     <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
             </a>
-        </div>
-        <div class="hero-scroll-indicator">
-            <span>Scroll to explore</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 5v14M19 12l-7 7-7-7"/>
-            </svg>
         </div>
     </section>
 
@@ -957,22 +984,22 @@
         <div class="section-container">
             <div class="section-header">
                 <span class="section-label">Your Checklist</span>
-                <h2 class="section-title">10 Steps Every Smart Buyer Takes</h2>
-                <p class="section-subtitle">Make informed decisions with this comprehensive evaluation framework.</p>
+                <h2 class="section-title">Steps Every Smart Buyer Takes Before Choosing a Home in Yelahanka</h2>
+                <p class="section-subtitle">Buying a home is one of life's biggest milestones. But with excitement comes responsibility.</p>
             </div>
 
             <div class="accordion-container">
                 
-                <!-- Step 1 -->
+                <!-- Step 1: Verify RERA Registration -->
                 <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800">
                     <div class="accordion-bg"></div>
                     <div class="accordion-header">
                         <div class="accordion-number">01</div>
                         <div class="accordion-title-wrapper">
                             <div class="accordion-title">Verify RERA Registration</div>
-                            <div class="accordion-preview">Transparency, accountability, and legal protection for your investment.</div>
+                            <div class="accordion-preview">Your first and most important safeguard against delays and defaults.</div>
                         </div>
-                        <div class="accordion-icon">
+                        <div class="accordion-icon-arrow">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"/>
                             </svg>
@@ -980,16 +1007,15 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <p>RERA registration is your first line of defense as a home buyer. It ensures the developer has obtained all necessary approvals and is legally bound to deliver what's promised.</p>
-                            <p>Always verify the RERA number on the Karnataka RERA website. Check for any complaints, project timeline adherence, and financial disclosures.</p>
+                            <p>Start with the basics. Ensure the project is registered under RERA. This Act ensures transparency, accountability, and grievance redressal. It is your first and most important safeguard against delays and defaults.</p>
                             <div class="accordion-highlight">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                                     <polyline points="22 4 12 14.01 9 11.01"/>
                                 </svg>
-                                Godrej Properties: 100% RERA Compliant
+                                Your first and most important safeguard
                             </div>
-                            <button class="narration-btn" data-text="RERA registration is your first line of defense as a home buyer. It ensures the developer has obtained all necessary approvals and is legally bound to deliver what's promised. Always verify the RERA number on the Karnataka RERA website.">
+                            <button class="narration-btn" data-text="Start with the basics. Ensure the project is registered under RERA. This Act ensures transparency, accountability, and grievance redressal. It is your first and most important safeguard against delays and defaults.">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 Play Narration
                             </button>
@@ -997,16 +1023,16 @@
                     </div>
                 </div>
 
-                <!-- Step 2 -->
+                <!-- Step 2: Know Your True Carpet Area -->
                 <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800">
                     <div class="accordion-bg"></div>
                     <div class="accordion-header">
                         <div class="accordion-number">02</div>
                         <div class="accordion-title-wrapper">
                             <div class="accordion-title">Know Your True Carpet Area</div>
-                            <div class="accordion-preview">Real usable space vs super built-up illusions — understand what you're paying for.</div>
+                            <div class="accordion-preview">The actual net usable space inside your walls determines the value of your purchase.</div>
                         </div>
-                        <div class="accordion-icon">
+                        <div class="accordion-icon-arrow">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"/>
                             </svg>
@@ -1014,16 +1040,15 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <p>Carpet area is the actual usable floor area within the walls of your apartment. Post-RERA, developers must quote prices based on carpet area, not super built-up area.</p>
-                            <p>A smart buyer calculates the carpet-to-super-built-up ratio. Efficient layouts offer 70-75% carpet area — anything below 65% means you're paying for unusable space.</p>
+                            <p>Don't be misled by "Super Built-up Area" or "Saleable Area." Focus on the Carpet Area, the actual net usable space inside your walls. This is the space you live in, and this is what truly determines the value of your purchase.</p>
                             <div class="accordion-highlight">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
                                     <line x1="3" y1="9" x2="21" y2="9"/>
                                 </svg>
-                                Ask for carpet area breakup before booking
+                                The space you live in determines true value
                             </div>
-                            <button class="narration-btn" data-text="Carpet area is the actual usable floor area within the walls of your apartment. Post-RERA, developers must quote prices based on carpet area, not super built-up area. A smart buyer calculates the carpet-to-super-built-up ratio. Efficient layouts offer 70 to 75 percent carpet area.">
+                            <button class="narration-btn" data-text="Don't be misled by Super Built-up Area or Saleable Area. Focus on the Carpet Area, the actual net usable space inside your walls. This is the space you live in, and this is what truly determines the value of your purchase.">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 Play Narration
                             </button>
@@ -1031,16 +1056,16 @@
                     </div>
                 </div>
 
-                <!-- Step 3 -->
+                <!-- Step 3: Analyze the Growth Trajectory -->
                 <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800">
                     <div class="accordion-bg"></div>
                     <div class="accordion-header">
                         <div class="accordion-number">03</div>
                         <div class="accordion-title-wrapper">
-                            <div class="accordion-title">Analyze the Growth Trajectory</div>
-                            <div class="accordion-preview">Yelahanka's 25.3% appreciation signals the second wave is here.</div>
+                            <div class="accordion-title">Analyze the Growth Trajectory (The 25.3%* Rule)</div>
+                            <div class="accordion-preview">Yelahanka is entering its "Second Wave" of appreciation, fueled by infrastructure maturity.</div>
                         </div>
-                        <div class="accordion-icon">
+                        <div class="accordion-icon-arrow">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"/>
                             </svg>
@@ -1048,16 +1073,15 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <p>Yelahanka is experiencing a growth pattern similar to Whitefield's early 2010s boom. Key drivers include the upcoming metro line, airport proximity, and major IT corridor development.</p>
-                            <p>Historical data shows 25.3% appreciation in the region over recent years. Smart buyers recognize these signals and position themselves before the peak, not after.</p>
+                            <p>Smart buyers don't just buy a home; they buy an asset. Look at the historical data. Yelahanka has quietly transformed, recording a massive 25.3%* growth in real estate value recently. While other markets saturate, Yelahanka is entering its "Second Wave" of appreciation, fueled by infrastructure maturity.</p>
                             <div class="accordion-highlight">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
                                     <polyline points="17 6 23 6 23 12"/>
                                 </svg>
-                                Data-driven investing beats speculation
+                                25.3%* growth | Second Wave of appreciation
                             </div>
-                            <button class="narration-btn" data-text="Yelahanka is experiencing a growth pattern similar to Whitefield's early 2010s boom. Key drivers include the upcoming metro line, airport proximity, and major IT corridor development. Historical data shows 25.3 percent appreciation in the region.">
+                            <button class="narration-btn" data-text="Smart buyers don't just buy a home; they buy an asset. Look at the historical data. Yelahanka has quietly transformed, recording a massive 25.3 percent growth in real estate value recently. While other markets saturate, Yelahanka is entering its Second Wave of appreciation, fueled by infrastructure maturity.">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 Play Narration
                             </button>
@@ -1065,16 +1089,16 @@
                     </div>
                 </div>
 
-                <!-- Step 4 -->
+                <!-- Step 4: Check the Lung Power -->
                 <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800">
                     <div class="accordion-bg"></div>
                     <div class="accordion-header">
                         <div class="accordion-number">04</div>
                         <div class="accordion-title-wrapper">
-                            <div class="accordion-title">Check the "Lung Power" — AQI Advantage</div>
-                            <div class="accordion-preview">Defense land, GKVK, cooler micro-climate, cleaner air for your family.</div>
+                            <div class="accordion-title">Check the "Lung Power" (AQI Advantage)</div>
+                            <div class="accordion-preview">The most luxurious amenity is fresh air. Ensure your home is within the "Green Shield."</div>
                         </div>
-                        <div class="accordion-icon">
+                        <div class="accordion-icon-arrow">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"/>
                             </svg>
@@ -1082,18 +1106,14 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <p>Yelahanka's proximity to 1,320 acres of GKVK forest and protected defense lands creates a unique micro-climate advantage that urban Bangalore cannot replicate.</p>
-                            <p>AQI levels here consistently measure 30-40% better than central Bangalore. For families with children or elderly members, this isn't luxury — it's necessity.</p>
+                            <p>In a city struggling with pollution, the most luxurious amenity is fresh air. Unlike the congested CBD, Yelahanka benefits from a massive protected green zone (Defense land & GKVK). This keeps the AQI consistently healthier and the micro-climate often 2°C cooler than central Bangalore. Ensure your future home is within this "Green Shield."</p>
                             <div class="accordion-highlight">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                    <circle cx="9" cy="7" r="4"/>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    <path d="M12 2L2 22h20L12 2z"/>
                                 </svg>
-                                Your family deserves cleaner air
+                                2°C cooler | Green Shield advantage
                             </div>
-                            <button class="narration-btn" data-text="Yelahanka's proximity to 1,320 acres of GKVK forest and protected defense lands creates a unique micro-climate advantage. AQI levels here consistently measure 30 to 40 percent better than central Bangalore.">
+                            <button class="narration-btn" data-text="In a city struggling with pollution, the most luxurious amenity is fresh air. Unlike the congested CBD, Yelahanka benefits from a massive protected green zone including Defense land and GKVK. This keeps the AQI consistently healthier and the micro-climate often 2 degrees cooler than central Bangalore.">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 Play Narration
                             </button>
@@ -1101,16 +1121,16 @@
                     </div>
                 </div>
 
-                <!-- Step 5 -->
+                <!-- Step 5: Define Your 15-Minute Ecosystem -->
                 <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800">
                     <div class="accordion-bg"></div>
                     <div class="accordion-header">
                         <div class="accordion-number">05</div>
                         <div class="accordion-title-wrapper">
-                            <div class="accordion-title">Define Your 15-Minute Ecosystem</div>
-                            <div class="accordion-preview">Education, healthcare, lifestyle, work hubs — everything within reach.</div>
+                            <div class="accordion-title">Define Your "15-Minute Ecosystem"</div>
+                            <div class="accordion-preview">Smart buyers look at what lies outside the gates as much as what is inside.</div>
                         </div>
-                        <div class="accordion-icon">
+                        <div class="accordion-icon-arrow">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"/>
                             </svg>
@@ -1118,16 +1138,20 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <p>The 15-minute city concept is no longer theoretical — it's how modern families evaluate locations. Map out schools, hospitals, grocery stores, and recreational facilities within a 15-minute radius.</p>
-                            <p>Yelahanka offers top-tier schools (Ryan International, Gopalan), multi-specialty hospitals, and direct connectivity to major tech parks like Manyata and KIADB Aerospace Park.</p>
+                            <p>Smart buyers look at what lies outside the gates as much as what is inside. In Yelahanka, you don't need to travel hours for essentials. Check if your project connects to these hubs:</p>
+                            <p><strong>Education:</strong> NITTE Meenakshi, BMS Institute, DPS, Ryan International.<br>
+                            <strong>Healthcare:</strong> Aster CMI, Manipal Hospital, Cytecare Cancer Hospital.<br>
+                            <strong>Lifestyle:</strong> Mall of Asia, RMZ Galleria, Bhartiya Mall of Bengaluru.<br>
+                            <strong>Work Hubs:</strong> Manyata Tech Park, L&T Tech Park, and the upcoming Airport City.<br>
+                            <strong>Connectivity:</strong> The 15-minute signal-free run to KIAL and the upcoming Blue Line Metro.</p>
                             <div class="accordion-highlight">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <circle cx="12" cy="12" r="10"/>
                                     <polyline points="12 6 12 12 16 14"/>
                                 </svg>
-                                30 min to Airport | 25 min to Manyata
+                                15-min signal-free run to KIAL
                             </div>
-                            <button class="narration-btn" data-text="The 15-minute city concept is how modern families evaluate locations. Yelahanka offers top-tier schools like Ryan International and Gopalan, multi-specialty hospitals, and direct connectivity to major tech parks. 30 minutes to Airport and 25 minutes to Manyata.">
+                            <button class="narration-btn" data-text="Smart buyers look at what lies outside the gates as much as what is inside. In Yelahanka, you don't need to travel hours for essentials. Check if your project connects to education hubs like NITTE Meenakshi and DPS, healthcare like Aster CMI and Manipal Hospital, lifestyle destinations, work hubs like Manyata Tech Park, and the 15-minute signal-free run to KIAL and upcoming Blue Line Metro.">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 Play Narration
                             </button>
@@ -1135,16 +1159,16 @@
                     </div>
                 </div>
 
-                <!-- Step 6 -->
+                <!-- Step 6: Decide on Construction Stage -->
                 <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800">
                     <div class="accordion-bg"></div>
                     <div class="accordion-header">
                         <div class="accordion-number">06</div>
                         <div class="accordion-title-wrapper">
-                            <div class="accordion-title">Construction Stage: Risk vs Reward</div>
-                            <div class="accordion-preview">Under-construction vs ready-to-move — understand GST, ROI, and Mivan technology.</div>
+                            <div class="accordion-title">Decide on Construction Stage (Risk vs. Reward)</div>
+                            <div class="accordion-preview">Weigh the pros and cons of Under-Construction vs. Ready-to-Move.</div>
                         </div>
-                        <div class="accordion-icon">
+                        <div class="accordion-icon-arrow">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"/>
                             </svg>
@@ -1152,18 +1176,18 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <p>Under-construction properties typically offer 15-25% price advantage over ready-to-move. However, this comes with waiting periods and construction-linked payments.</p>
-                            <p>Mivan technology (aluminum formwork) ensures faster, more precise construction with superior finish quality. GST is applicable on under-construction properties but often absorbed in the total price calculation.</p>
+                            <p>Weigh the pros and cons of Under-Construction vs. Ready-to-Move:</p>
+                            <p><strong>Cost:</strong> Under-construction homes are often priced lower, offering an immediate paper profit as the project nears completion.<br>
+                            <strong>Tax:</strong> GST (12%) applies to under-construction units, but they often yield higher ROI.<br>
+                            <strong>Quality Check:</strong> Buying early allows you to monitor the construction quality and materials (like Mivan technology) from the ground up.</p>
                             <div class="accordion-highlight">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                                     <polyline points="14 2 14 8 20 8"/>
-                                    <line x1="16" y1="13" x2="8" y2="13"/>
-                                    <line x1="16" y1="17" x2="8" y2="17"/>
                                 </svg>
-                                Compare total cost including GST & registration
+                                Early buyers can monitor quality
                             </div>
-                            <button class="narration-btn" data-text="Under-construction properties typically offer 15 to 25 percent price advantage over ready-to-move. Mivan technology ensures faster, more precise construction with superior finish quality.">
+                            <button class="narration-btn" data-text="Weigh the pros and cons of Under-Construction vs. Ready-to-Move. Under-construction homes are often priced lower, offering an immediate paper profit. GST 12% applies to under-construction units, but they often yield higher ROI. Buying early allows you to monitor the construction quality and materials like Mivan technology from the ground up.">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 Play Narration
                             </button>
@@ -1171,16 +1195,16 @@
                     </div>
                 </div>
 
-                <!-- Step 7 -->
+                <!-- Step 7: Look for Next-Gen Greenery -->
                 <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=800">
                     <div class="accordion-bg"></div>
                     <div class="accordion-header">
                         <div class="accordion-number">07</div>
                         <div class="accordion-title-wrapper">
-                            <div class="accordion-title">Next-Gen Greenery Philosophy</div>
-                            <div class="accordion-preview">Purpose-led landscapes, wellness trails, IGBC alignment for sustainable living.</div>
+                            <div class="accordion-title">Look for "Next-Gen" Greenery</div>
+                            <div class="accordion-preview">Don't settle for basic landscaping. Look for purpose-led green spaces.</div>
                         </div>
-                        <div class="accordion-icon">
+                        <div class="accordion-icon-arrow">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"/>
                             </svg>
@@ -1188,16 +1212,15 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <p>Modern developments go beyond decorative landscaping. Look for projects with native plant species, rainwater harvesting integration, and IGBC (Indian Green Building Council) certification.</p>
-                            <p>Wellness trails, therapeutic gardens, and biophilic design elements contribute to mental well-being. These aren't amenities — they're investments in your family's health.</p>
+                            <p>Don't settle for basic landscaping. Modern wellness homes are designed around curated, purpose-led green spaces - such as therapeutic walking trails, shaded groves, and biodiversity-focused landscapes. Projects with thoughtful, IGBC-aligned landscape planning help lower ambient temperatures and support better mental well-being for your family.</p>
                             <div class="accordion-highlight">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
                                     <path d="M12 6v6l4 2"/>
                                 </svg>
-                                IGBC-aligned projects retain value better
+                                IGBC-aligned for mental well-being
                             </div>
-                            <button class="narration-btn" data-text="Modern developments go beyond decorative landscaping. Look for projects with native plant species, rainwater harvesting, and IGBC certification. Wellness trails and therapeutic gardens are investments in your family's health.">
+                            <button class="narration-btn" data-text="Don't settle for basic landscaping. Modern wellness homes are designed around curated, purpose-led green spaces - such as therapeutic walking trails, shaded groves, and biodiversity-focused landscapes. Projects with thoughtful, IGBC-aligned landscape planning help lower ambient temperatures and support better mental well-being for your family.">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 Play Narration
                             </button>
@@ -1205,16 +1228,16 @@
                     </div>
                 </div>
 
-                <!-- Step 8 -->
+                <!-- Step 8: Evaluate Developer's Track Record -->
                 <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800">
                     <div class="accordion-bg"></div>
                     <div class="accordion-header">
                         <div class="accordion-number">08</div>
                         <div class="accordion-title-wrapper">
-                            <div class="accordion-title">Developer Track Record</div>
-                            <div class="accordion-preview">On-time delivery, maintenance quality, financial stability — verify before you trust.</div>
+                            <div class="accordion-title">Evaluate the Developer's Track Record</div>
+                            <div class="accordion-preview">History repeats itself. Study the developer's past projects.</div>
                         </div>
-                        <div class="accordion-icon">
+                        <div class="accordion-icon-arrow">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"/>
                             </svg>
@@ -1222,8 +1245,7 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <p>A developer's past is the best predictor of your future experience. Research their delivery track record, construction quality in existing projects, and post-handover maintenance standards.</p>
-                            <p>Check financial health indicators — listed companies offer transparency through annual reports. Visit completed projects, talk to existing residents, and verify claims independently.</p>
+                            <p>History repeats itself. Study the developer's past projects. Did they deliver on time? How is the maintenance years later? Financial stability and a strong portfolio are the best indicators that your home will be delivered as promised.</p>
                             <div class="accordion-highlight">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M12 2L2 7l10 5 10-5-10-5z"/>
@@ -1232,7 +1254,7 @@
                                 </svg>
                                 Godrej: 127+ years of trust
                             </div>
-                            <button class="narration-btn" data-text="A developer's past is the best predictor of your future experience. Research their delivery track record and construction quality. Listed companies offer transparency through annual reports. Godrej has 127 plus years of trust.">
+                            <button class="narration-btn" data-text="History repeats itself. Study the developer's past projects. Did they deliver on time? How is the maintenance years later? Financial stability and a strong portfolio are the best indicators that your home will be delivered as promised.">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 Play Narration
                             </button>
@@ -1240,16 +1262,16 @@
                     </div>
                 </div>
 
-                <!-- Step 9 -->
+                <!-- Step 9: Assess the Amenities that Matter -->
                 <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800">
                     <div class="accordion-bg"></div>
                     <div class="accordion-header">
                         <div class="accordion-number">09</div>
                         <div class="accordion-title-wrapper">
-                            <div class="accordion-title">Amenities That Actually Matter</div>
-                            <div class="accordion-preview">Clubhouse, co-working, sports zones, community living — function over flash.</div>
+                            <div class="accordion-title">Assess the Amenities that Matter</div>
+                            <div class="accordion-preview">Your community amenities become your daily lifestyle.</div>
                         </div>
-                        <div class="accordion-icon">
+                        <div class="accordion-icon-arrow">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"/>
                             </svg>
@@ -1257,16 +1279,15 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <p>A 50-amenity brochure means nothing if you'll only use 5. Focus on amenities aligned with your lifestyle: swimming pool for fitness, clubhouse for social events, co-working space for hybrid work.</p>
-                            <p>Consider maintenance costs — more amenities mean higher monthly charges. Smart design integrates multi-purpose spaces that serve multiple needs without inflating your outflow.</p>
+                            <p>Look beyond the standard swimming pool. Does the project have a fully equipped clubhouse, co-working spaces for the hybrid era, and dedicated sports zones? In a self-sustained hub like Yelahanka, your community amenities become your daily lifestyle.</p>
                             <div class="accordion-highlight">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
                                     <circle cx="12" cy="7" r="4"/>
                                 </svg>
-                                Community > Amenity count
+                                Amenities become your daily lifestyle
                             </div>
-                            <button class="narration-btn" data-text="A 50-amenity brochure means nothing if you'll only use 5. Focus on amenities aligned with your lifestyle. Consider maintenance costs, as more amenities mean higher monthly charges. Community matters more than amenity count.">
+                            <button class="narration-btn" data-text="Look beyond the standard swimming pool. Does the project have a fully equipped clubhouse, co-working spaces for the hybrid era, and dedicated sports zones? In a self-sustained hub like Yelahanka, your community amenities become your daily lifestyle.">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 Play Narration
                             </button>
@@ -1274,16 +1295,16 @@
                     </div>
                 </div>
 
-                <!-- Step 10 -->
+                <!-- Step 10: Keep Your Documents & Finances Ready -->
                 <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800">
                     <div class="accordion-bg"></div>
                     <div class="accordion-header">
                         <div class="accordion-number">10</div>
                         <div class="accordion-title-wrapper">
-                            <div class="accordion-title">Documents & Financial Readiness</div>
-                            <div class="accordion-preview">PAN, Aadhaar, tax benefits under 80C & 24 — prepare before you commit.</div>
+                            <div class="accordion-title">Keep Your Documents & Finances Ready</div>
+                            <div class="accordion-preview">Tax benefits under Section 24 and 80C only apply if possession is taken within the stipulated time.</div>
                         </div>
-                        <div class="accordion-icon">
+                        <div class="accordion-icon-arrow">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <polyline points="6 9 12 15 18 9"/>
                             </svg>
@@ -1291,8 +1312,7 @@
                     </div>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            <p>Organize your documents before starting the buying process: PAN, Aadhaar, income proof, bank statements (6 months), and Form 16. Pre-approved home loans give you negotiating power.</p>
-                            <p>Understand tax benefits: Section 80C (up to ₹1.5L on principal), Section 24 (up to ₹2L on interest). Factor in registration charges (5.6% in Karnataka) and stamp duty when calculating total cost.</p>
+                            <p>Before you book, ensure your financial health is in order. Keep your PAN card, Aadhaar, and a cancelled cheque ready. Remember, tax benefits under Section 24 and 80C only apply if possession is taken within the stipulated time, so plan your finances with a clear budget in mind.</p>
                             <div class="accordion-highlight">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
@@ -1300,9 +1320,9 @@
                                     <line x1="8" y1="2" x2="8" y2="6"/>
                                     <line x1="3" y1="10" x2="21" y2="10"/>
                                 </svg>
-                                Get pre-approved before site visits
+                                Tax benefits under Section 24 & 80C
                             </div>
-                            <button class="narration-btn" data-text="Organize your documents before starting the buying process: PAN, Aadhaar, income proof, bank statements, and Form 16. Pre-approved home loans give you negotiating power. Understand tax benefits under Section 80C and Section 24. Get pre-approved before site visits.">
+                            <button class="narration-btn" data-text="Before you book, ensure your financial health is in order. Keep your PAN card, Aadhaar, and a cancelled cheque ready. Remember, tax benefits under Section 24 and 80C only apply if possession is taken within the stipulated time, so plan your finances with a clear budget in mind.">
                                 <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                                 Play Narration
                             </button>
