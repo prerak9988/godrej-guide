@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Smart Buyer's Guide to Yelahanka | Godrej Properties</title>
+    <style>
+        /* --- FONTS --- */
+        @font-face {
+            font-family: 'CeraGodrejInterio';
+            src: url('CeraGodrejInterio-Regular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'CeraGodrejInterio';
+            src: url('CeraGodrejInterio-Bold.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* --- CSS VARIABLES --- */
+        :root {
+            --green-deep: #1F7A4D;
+            --green-light: #2A9D5C;
+            --yellow-soft: #F4D35E;
+            --yellow-glow: #F9E88A;
+            --charcoal: #1C1C1C;
+            --charcoal-light: #2D2D2D;
+            --white: #FFFFFF;
+            --off-white: #FAFAFA;
+            --gray-soft: #F5F5F5;
+            --gray-text: #6B7280;
+            --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 8px 30px rgba(31, 122, 77, 0.15);
+            --radius-lg: 20px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* --- RESET & BASE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'CeraGodrejInterio', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--off-white);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- STICKY NAVIGATION --- */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(31, 122, 77, 0.1);
+            padding: 0 24px;
+            transition: var(--transition-smooth);
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .nav-logo {
+            height: 80px;
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+            margin-left: -12px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            font-weight: 500;
+            position: relative;
+            padding: 8px 0;
+            transition: color 0.3s;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--green-deep);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--green-deep);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--green-deep);
+            color: var(--white) !important;
+            padding: 10px 20px !important;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+        }
+
+        .nav-cta::after {
+            display: none !important;
+        }
+
+        .nav-cta:hover {
+            background: var(--green-light) !important;
+            color: var(--white) !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--charcoal);
+            margin: 6px 0;
+            transition: var(--transition-smooth);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 120px 24px 80px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(31, 122, 77, 0.03) 0%, 
+                rgba(244, 211, 94, 0.05) 50%,
+                rgba(31, 122, 77, 0.02) 100%);
+            z-index: -2;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(31, 122, 77, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(244, 211, 94, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(31, 122, 77, 0.03) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(31, 122, 77, 0.1);
+            color: var(--green-deep);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 32px;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero-badge svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: var(--charcoal);
+            line-height: 1.15;
+            margin-bottom: 24px;
+            animation: fadeInUp 0.8s ease 0.1s forwards;
+            opacity: 0;
+        }
+
+        .hero-title .highlight {
+            color: var(--green-deep);
+            position: relative;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+            color: var(--gray-text);
+            max-width: 650px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--green-deep);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: var(--radius-md);
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(31, 122, 77, 0.3);
+            animation: fadeInUp 0.8s ease 0.3s forwards;
+            opacity: 0;
+        }
+
+        .hero-cta:hover {
+            background: var(--green-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(31, 122, 77, 0.4);
+        }
+
+        .hero-cta svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s;
+        }
+
+        .hero-cta:hover svg {
+            transform: translateX(4px);
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            color: var(--gray-text);
+            font-size: 0.85rem;
+            animation: bounce 2s infinite;
+        }
+
+        .hero-scroll-indicator svg {
+            width: 24px;
+            height: 24px;
+            opacity: 0.6;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- SECTION COMMON --- */
+        section {
+            padding: 80px 24px;
+        }
+
+        .section-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            display: inline-block;
+            background: rgba(31, 122, 77, 0.1);
+            color: var(--green-deep);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--charcoal);
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-text);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* --- ACCORDION SECTION --- */
+        #smart-buyer-steps {
+            background: var(--white);
+        }
+
+        .accordion-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .accordion-item {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-soft);
+            position: relative;
+        }
+
+        .accordion-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            filter: blur(3px) grayscale(100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: 0;
+            transform: scale(1.05);
+        }
+
+        .accordion-item.active .accordion-bg {
+            opacity: 0.4;
+        }
+
+        .accordion-item.active::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.85);
+            z-index: 0;
+            border-radius: var(--radius-lg);
+        }
+
+        .accordion-header,
+        .accordion-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .accordion-item:hover {
+            border-color: rgba(31, 122, 77, 0.2);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .accordion-item.active {
+            border-color: var(--green-deep);
+            box-shadow: 0 8px 30px rgba(31, 122, 77, 0.12);
+        }
+
+        .accordion-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 24px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .accordion-header:hover {
+            background: rgba(31, 122, 77, 0.02);
+        }
+
+        .accordion-number {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-light) 100%);
+            color: var(--white);
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50%;
+            transition: var(--transition-smooth);
+        }
+
+        .accordion-item.active .accordion-number {
+            background: linear-gradient(135deg, var(--yellow-soft) 0%, var(--yellow-glow) 100%);
+            color: var(--charcoal);
+        }
+
+        .accordion-title-wrapper {
+            flex: 1;
+        }
+
+        .accordion-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 4px;
+            transition: color 0.3s;
+        }
+
+        .accordion-item.active .accordion-title {
+            color: var(--green-deep);
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+        }
+
+        .accordion-preview {
+            font-size: 0.9rem;
+            color: var(--gray-text);
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .accordion-item.active .accordion-preview {
+            display: none;
+        }
+
+        .accordion-icon {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gray-soft);
+            border-radius: 50%;
+            transition: var(--transition-smooth);
+        }
+
+        .accordion-icon svg {
+            width: 16px;
+            height: 16px;
+            color: var(--charcoal);
+            transition: transform 0.3s;
+        }
+
+        .accordion-item.active .accordion-icon {
+            background: var(--green-deep);
+        }
+
+        .accordion-item.active .accordion-icon svg {
+            color: var(--white);
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 500px;
+        }
+
+        .accordion-body {
+            padding: 0 24px 28px 92px;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s;
+        }
+
+        .accordion-item.active .accordion-body {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .accordion-body p {
+            font-size: 1rem;
+            color: var(--charcoal);
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        .accordion-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .accordion-highlight {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(244, 211, 94, 0.2);
+            color: var(--charcoal);
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .accordion-highlight svg {
+            width: 16px;
+            height: 16px;
+            color: var(--green-deep);
+        }
+
+        .narration-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--green-deep);
+            color: var(--white);
+            border: none;
+            padding: 10px 18px;
+            border-radius: 24px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 16px;
+            transition: var(--transition-smooth);
+            font-family: inherit;
+        }
+
+        .narration-btn:hover {
+            background: var(--green-light);
+            transform: translateY(-1px);
+        }
+
+        .narration-btn:active {
+            transform: translateY(0);
+        }
+
+        .narration-btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .narration-btn.playing {
+            background: #c0392b;
+        }
+
+        .narration-btn.playing:hover {
+            background: #e74c3c;
+        }
+
+        /* --- WHY YELAHANKA SECTION --- */
+        #why-yelahanka {
+            background: linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition-smooth);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(31, 122, 77, 0.15);
+        }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(31, 122, 77, 0.1) 0%, rgba(31, 122, 77, 0.05) 100%);
+            border-radius: var(--radius-md);
+            margin-bottom: 20px;
+        }
+
+        .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            color: var(--green-deep);
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 12px;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: var(--gray-text);
+            line-height: 1.6;
+        }
+
+        /* --- CTA SECTION --- */
+        .cta-section {
+            background: linear-gradient(135deg, var(--green-deep) 0%, #165C3A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 10% 90%, rgba(244, 211, 94, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.08) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .cta-content p {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 32px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--yellow-soft);
+            color: var(--charcoal);
+            padding: 18px 36px;
+            border-radius: var(--radius-md);
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background: var(--yellow-glow);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .cta-button svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: var(--charcoal);
+            color: rgba(255, 255, 255, 0.7);
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--yellow-soft);
+            text-decoration: none;
+        }
+
+        /* --- MOBILE STYLES --- */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 90px;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 24px;
+                gap: 16px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mobile-menu-btn.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+
+            .mobile-menu-btn.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .mobile-menu-btn.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
+            }
+
+            .hero {
+                padding: 100px 20px 60px;
+                min-height: auto;
+            }
+
+            .hero-scroll-indicator {
+                display: none;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .section-header {
+                margin-bottom: 40px;
+            }
+
+            .accordion-header {
+                padding: 20px 16px;
+                gap: 14px;
+            }
+
+            .accordion-number {
+                width: 40px;
+                height: 40px;
+                font-size: 0.95rem;
+            }
+
+            .accordion-title {
+                font-size: 1rem;
+            }
+
+            .accordion-preview {
+                font-size: 0.85rem;
+            }
+
+            .accordion-body {
+                padding: 0 16px 24px 70px;
+            }
+
+            .accordion-body p {
+                font-size: 0.95rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card {
+                padding: 24px;
+            }
+
+            .cta-button {
+                padding: 16px 28px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .accordion-body {
+                padding-left: 16px;
+            }
+
+            .accordion-number {
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <img src="GPL Logo-03.jpg" alt="Godrej Properties" class="nav-logo">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#why-yelahanka">Why Yelahanka</a></li>
+                <li><a href="#smart-buyer-steps">Smart Buyer Steps</a></li>
+                <li><a href="#contact" class="nav-cta">Enquire Now</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-pattern"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Yelahanka, North Bangalore
+            </div>
+            <h1 class="hero-title">
+                Every Smart Buyer Takes These Steps Before Choosing a Home in <span class="highlight">Yelahanka</span>
+            </h1>
+            <p class="hero-subtitle">
+                Buying a home is one of life's biggest milestones. Smart buyers go beyond brochures — they evaluate data, location, and long-term value.
+            </p>
+            <a href="#smart-buyer-steps" class="hero-cta">
+                Begin Your Journey
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- WHY YELAHANKA -->
+    <section id="why-yelahanka">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Location Intelligence</span>
+                <h2 class="section-title">Why Yelahanka is the Smart Choice</h2>
+                <p class="section-subtitle">A neighborhood designed for families who value growth, wellness, and connectivity.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 20V10M18 20V4M6 20v-4"/>
+                        </svg>
+                    </div>
+                    <h3>25.3%* Growth Trajectory</h3>
+                    <p>Yelahanka is experiencing its second wave of appreciation, driven by infrastructure and connectivity upgrades.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>1,320 Acres of Green Lungs</h3>
+                    <p>Adjacent to GKVK forest and defense lands, offering cleaner air and cooler micro-climate year-round.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>30-Minute Connectivity</h3>
+                    <p>Quick access to Airport, CBD, Manyata Tech Park and upcoming Metro connectivity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SMART BUYER STEPS -->
+    <section id="smart-buyer-steps">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Your Checklist</span>
+                <h2 class="section-title">10 Steps Every Smart Buyer Takes</h2>
+                <p class="section-subtitle">Make informed decisions with this comprehensive evaluation framework.</p>
+            </div>
+
+            <div class="accordion-container">
+                
+                <!-- Step 1 -->
+                <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800">
+                    <div class="accordion-bg"></div>
+                    <div class="accordion-header">
+                        <div class="accordion-number">01</div>
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-title">Verify RERA Registration</div>
+                            <div class="accordion-preview">Transparency, accountability, and legal protection for your investment.</div>
+                        </div>
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>RERA registration is your first line of defense as a home buyer. It ensures the developer has obtained all necessary approvals and is legally bound to deliver what's promised.</p>
+                            <p>Always verify the RERA number on the Karnataka RERA website. Check for any complaints, project timeline adherence, and financial disclosures.</p>
+                            <div class="accordion-highlight">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                                Godrej Properties: 100% RERA Compliant
+                            </div>
+                            <button class="narration-btn" data-text="RERA registration is your first line of defense as a home buyer. It ensures the developer has obtained all necessary approvals and is legally bound to deliver what's promised. Always verify the RERA number on the Karnataka RERA website.">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Play Narration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800">
+                    <div class="accordion-bg"></div>
+                    <div class="accordion-header">
+                        <div class="accordion-number">02</div>
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-title">Know Your True Carpet Area</div>
+                            <div class="accordion-preview">Real usable space vs super built-up illusions — understand what you're paying for.</div>
+                        </div>
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Carpet area is the actual usable floor area within the walls of your apartment. Post-RERA, developers must quote prices based on carpet area, not super built-up area.</p>
+                            <p>A smart buyer calculates the carpet-to-super-built-up ratio. Efficient layouts offer 70-75% carpet area — anything below 65% means you're paying for unusable space.</p>
+                            <div class="accordion-highlight">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="3" y1="9" x2="21" y2="9"/>
+                                </svg>
+                                Ask for carpet area breakup before booking
+                            </div>
+                            <button class="narration-btn" data-text="Carpet area is the actual usable floor area within the walls of your apartment. Post-RERA, developers must quote prices based on carpet area, not super built-up area. A smart buyer calculates the carpet-to-super-built-up ratio. Efficient layouts offer 70 to 75 percent carpet area.">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Play Narration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800">
+                    <div class="accordion-bg"></div>
+                    <div class="accordion-header">
+                        <div class="accordion-number">03</div>
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-title">Analyze the Growth Trajectory</div>
+                            <div class="accordion-preview">Yelahanka's 25.3% appreciation signals the second wave is here.</div>
+                        </div>
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Yelahanka is experiencing a growth pattern similar to Whitefield's early 2010s boom. Key drivers include the upcoming metro line, airport proximity, and major IT corridor development.</p>
+                            <p>Historical data shows 25.3% appreciation in the region over recent years. Smart buyers recognize these signals and position themselves before the peak, not after.</p>
+                            <div class="accordion-highlight">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                                    <polyline points="17 6 23 6 23 12"/>
+                                </svg>
+                                Data-driven investing beats speculation
+                            </div>
+                            <button class="narration-btn" data-text="Yelahanka is experiencing a growth pattern similar to Whitefield's early 2010s boom. Key drivers include the upcoming metro line, airport proximity, and major IT corridor development. Historical data shows 25.3 percent appreciation in the region.">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Play Narration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800">
+                    <div class="accordion-bg"></div>
+                    <div class="accordion-header">
+                        <div class="accordion-number">04</div>
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-title">Check the "Lung Power" — AQI Advantage</div>
+                            <div class="accordion-preview">Defense land, GKVK, cooler micro-climate, cleaner air for your family.</div>
+                        </div>
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Yelahanka's proximity to 1,320 acres of GKVK forest and protected defense lands creates a unique micro-climate advantage that urban Bangalore cannot replicate.</p>
+                            <p>AQI levels here consistently measure 30-40% better than central Bangalore. For families with children or elderly members, this isn't luxury — it's necessity.</p>
+                            <div class="accordion-highlight">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                                Your family deserves cleaner air
+                            </div>
+                            <button class="narration-btn" data-text="Yelahanka's proximity to 1,320 acres of GKVK forest and protected defense lands creates a unique micro-climate advantage. AQI levels here consistently measure 30 to 40 percent better than central Bangalore.">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Play Narration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800">
+                    <div class="accordion-bg"></div>
+                    <div class="accordion-header">
+                        <div class="accordion-number">05</div>
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-title">Define Your 15-Minute Ecosystem</div>
+                            <div class="accordion-preview">Education, healthcare, lifestyle, work hubs — everything within reach.</div>
+                        </div>
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>The 15-minute city concept is no longer theoretical — it's how modern families evaluate locations. Map out schools, hospitals, grocery stores, and recreational facilities within a 15-minute radius.</p>
+                            <p>Yelahanka offers top-tier schools (Ryan International, Gopalan), multi-specialty hospitals, and direct connectivity to major tech parks like Manyata and KIADB Aerospace Park.</p>
+                            <div class="accordion-highlight">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                30 min to Airport | 25 min to Manyata
+                            </div>
+                            <button class="narration-btn" data-text="The 15-minute city concept is how modern families evaluate locations. Yelahanka offers top-tier schools like Ryan International and Gopalan, multi-specialty hospitals, and direct connectivity to major tech parks. 30 minutes to Airport and 25 minutes to Manyata.">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Play Narration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800">
+                    <div class="accordion-bg"></div>
+                    <div class="accordion-header">
+                        <div class="accordion-number">06</div>
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-title">Construction Stage: Risk vs Reward</div>
+                            <div class="accordion-preview">Under-construction vs ready-to-move — understand GST, ROI, and Mivan technology.</div>
+                        </div>
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Under-construction properties typically offer 15-25% price advantage over ready-to-move. However, this comes with waiting periods and construction-linked payments.</p>
+                            <p>Mivan technology (aluminum formwork) ensures faster, more precise construction with superior finish quality. GST is applicable on under-construction properties but often absorbed in the total price calculation.</p>
+                            <div class="accordion-highlight">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                </svg>
+                                Compare total cost including GST & registration
+                            </div>
+                            <button class="narration-btn" data-text="Under-construction properties typically offer 15 to 25 percent price advantage over ready-to-move. Mivan technology ensures faster, more precise construction with superior finish quality.">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Play Narration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?w=800">
+                    <div class="accordion-bg"></div>
+                    <div class="accordion-header">
+                        <div class="accordion-number">07</div>
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-title">Next-Gen Greenery Philosophy</div>
+                            <div class="accordion-preview">Purpose-led landscapes, wellness trails, IGBC alignment for sustainable living.</div>
+                        </div>
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Modern developments go beyond decorative landscaping. Look for projects with native plant species, rainwater harvesting integration, and IGBC (Indian Green Building Council) certification.</p>
+                            <p>Wellness trails, therapeutic gardens, and biophilic design elements contribute to mental well-being. These aren't amenities — they're investments in your family's health.</p>
+                            <div class="accordion-highlight">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/>
+                                    <path d="M12 6v6l4 2"/>
+                                </svg>
+                                IGBC-aligned projects retain value better
+                            </div>
+                            <button class="narration-btn" data-text="Modern developments go beyond decorative landscaping. Look for projects with native plant species, rainwater harvesting, and IGBC certification. Wellness trails and therapeutic gardens are investments in your family's health.">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Play Narration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800">
+                    <div class="accordion-bg"></div>
+                    <div class="accordion-header">
+                        <div class="accordion-number">08</div>
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-title">Developer Track Record</div>
+                            <div class="accordion-preview">On-time delivery, maintenance quality, financial stability — verify before you trust.</div>
+                        </div>
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>A developer's past is the best predictor of your future experience. Research their delivery track record, construction quality in existing projects, and post-handover maintenance standards.</p>
+                            <p>Check financial health indicators — listed companies offer transparency through annual reports. Visit completed projects, talk to existing residents, and verify claims independently.</p>
+                            <div class="accordion-highlight">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                    <path d="M2 17l10 5 10-5"/>
+                                    <path d="M2 12l10 5 10-5"/>
+                                </svg>
+                                Godrej: 127+ years of trust
+                            </div>
+                            <button class="narration-btn" data-text="A developer's past is the best predictor of your future experience. Research their delivery track record and construction quality. Listed companies offer transparency through annual reports. Godrej has 127 plus years of trust.">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Play Narration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 9 -->
+                <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800">
+                    <div class="accordion-bg"></div>
+                    <div class="accordion-header">
+                        <div class="accordion-number">09</div>
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-title">Amenities That Actually Matter</div>
+                            <div class="accordion-preview">Clubhouse, co-working, sports zones, community living — function over flash.</div>
+                        </div>
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>A 50-amenity brochure means nothing if you'll only use 5. Focus on amenities aligned with your lifestyle: swimming pool for fitness, clubhouse for social events, co-working space for hybrid work.</p>
+                            <p>Consider maintenance costs — more amenities mean higher monthly charges. Smart design integrates multi-purpose spaces that serve multiple needs without inflating your outflow.</p>
+                            <div class="accordion-highlight">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                Community > Amenity count
+                            </div>
+                            <button class="narration-btn" data-text="A 50-amenity brochure means nothing if you'll only use 5. Focus on amenities aligned with your lifestyle. Consider maintenance costs, as more amenities mean higher monthly charges. Community matters more than amenity count.">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Play Narration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 10 -->
+                <div class="accordion-item" data-bg="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800">
+                    <div class="accordion-bg"></div>
+                    <div class="accordion-header">
+                        <div class="accordion-number">10</div>
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-title">Documents & Financial Readiness</div>
+                            <div class="accordion-preview">PAN, Aadhaar, tax benefits under 80C & 24 — prepare before you commit.</div>
+                        </div>
+                        <div class="accordion-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Organize your documents before starting the buying process: PAN, Aadhaar, income proof, bank statements (6 months), and Form 16. Pre-approved home loans give you negotiating power.</p>
+                            <p>Understand tax benefits: Section 80C (up to ₹1.5L on principal), Section 24 (up to ₹2L on interest). Factor in registration charges (5.6% in Karnataka) and stamp duty when calculating total cost.</p>
+                            <div class="accordion-highlight">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                    <line x1="16" y1="2" x2="16" y2="6"/>
+                                    <line x1="8" y1="2" x2="8" y2="6"/>
+                                    <line x1="3" y1="10" x2="21" y2="10"/>
+                                </svg>
+                                Get pre-approved before site visits
+                            </div>
+                            <button class="narration-btn" data-text="Organize your documents before starting the buying process: PAN, Aadhaar, income proof, bank statements, and Form 16. Pre-approved home loans give you negotiating power. Understand tax benefits under Section 80C and Section 24. Get pre-approved before site visits.">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Play Narration
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section" id="contact">
+        <div class="cta-pattern"></div>
+        <div class="section-container">
+            <div class="cta-content">
+                <h2>Ready to Make the Smart Move?</h2>
+                <p>Connect with our team for personalized guidance on your home-buying journey in Yelahanka.</p>
+                <a href="#" class="cta-button">
+                    Explore Homes the Smart Way
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Godrej Properties Limited. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Accordion functionality
+        const accordionItems = document.querySelectorAll('.accordion-item');
+
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            
+            header.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all items
+                accordionItems.forEach(i => i.classList.remove('active'));
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Initialize background images from data-bg attribute
+        document.querySelectorAll('.accordion-item[data-bg]').forEach(item => {
+            const bg = item.querySelector('.accordion-bg');
+            if (bg) {
+                bg.style.backgroundImage = `url('${item.dataset.bg}')`;
+            }
+        });
+
+        // Narration button functionality
+        let currentUtterance = null;
+        let currentBtn = null;
+
+        document.querySelectorAll('.narration-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                
+                const text = btn.dataset.text;
+                
+                // If this button is already playing, stop it
+                if (currentBtn === btn && speechSynthesis.speaking) {
+                    speechSynthesis.cancel();
+                    btn.classList.remove('playing');
+                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Play Narration';
+                    currentBtn = null;
+                    return;
+                }
+                
+                // Stop any current narration
+                speechSynthesis.cancel();
+                if (currentBtn) {
+                    currentBtn.classList.remove('playing');
+                    currentBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Play Narration';
+                }
+                
+                // Create new utterance
+                const utterance = new SpeechSynthesisUtterance(text);
+                utterance.lang = 'en-IN';
+                utterance.rate = 0.9;
+                utterance.pitch = 1;
+                
+                // Update button state
+                btn.classList.add('playing');
+                btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg> Stop Narration';
+                currentBtn = btn;
+                
+                // Handle end of speech
+                utterance.onend = () => {
+                    btn.classList.remove('playing');
+                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Play Narration';
+                    currentBtn = null;
+                };
+                
+                utterance.onerror = () => {
+                    btn.classList.remove('playing');
+                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg> Play Narration';
+                    currentBtn = null;
+                };
+                
+                speechSynthesis.speak(utterance);
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80; // Account for fixed navbar
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+
+        // Observe accordion items
+        document.querySelectorAll('.accordion-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = `opacity 0.5s ease ${index * 0.05}s, transform 0.5s ease ${index * 0.05}s`;
+            observer.observe(item);
+        });
+    </script>
+</body>
+</html>
